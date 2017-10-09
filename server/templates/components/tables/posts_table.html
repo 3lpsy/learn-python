@@ -1,0 +1,55 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Title
+            </th>
+            <th class="text-right">
+                Actions
+            </th>
+            <th class="text-right">
+                View
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>
+                    {{post.id}}
+                </td>
+                <td>
+                    {{post.title}}
+                </td>
+                <td>
+                    <div class="row text-right">
+                        <form style="display:inline-block" action="{{url_for('post_destroy', post_id=post.id)}}" method="post">
+                            <button class="btn btn-danger" type="submit" name="button">
+                                <i class="fa fa-trash">
+                                </i>
+                            </button>
+                        </form>
+                        <a href="{{url_for('post_edit', post_id=post.id)}}" style="display:inline-block">
+                            <button class="btn btn-success" type="button" name="button">
+                                <i class="fa fa-edit">
+                                </i>
+                            </button>
+                        </a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <a href="{{url_for('post_show', post_id=post.id)}}" style="display:inline-block">
+                        <button class="btn btn-primary" type="button" name="button">
+                            <i class="fa fa-arrow-circle-right">
+                            </i>
+                        </button>
+                    </a>
+                </td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

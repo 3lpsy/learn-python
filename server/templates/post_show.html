@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    View Post
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <p style="font-size: 2em">
+                            {{ post.title or "None"}}
+                            <span style="font-size: 1em" class="pull-right">
+                                <a href="{{url_for('post_edit', post_id=post.id)}}">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+
+                            </span>
+                        </p>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <strong>By {{post.author.name}}</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                {{post.body or "None"}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

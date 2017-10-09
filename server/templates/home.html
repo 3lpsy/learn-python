@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Create Post
+{% endblock %}
+
+{% block body %}
+<div class="jumbotron">
+  <h1>Blog City!</h1>
+  <p>Welcome to the premier next-gen bloggin platform of the 21st center</p>
+  <p>
+      <a class="btn btn-primary btn-lg" href="{{url_for('post_index')}}" role="button">
+          Learn more
+      </a>
+    </p>
+</div>
+{% endblock %}

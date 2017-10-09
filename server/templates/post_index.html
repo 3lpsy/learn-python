@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    All Posts
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>All Posts</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Our Archive
+                    </div>
+                    {% include 'components/tables/posts_table.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

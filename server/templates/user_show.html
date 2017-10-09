@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    All Users
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>View Users</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        User
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th class="text-right">
+                                    Email
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        {{user.id}}
+                                    </td>
+                                    <td>
+                                        {{user.name}}
+                                    </td>
+                                    <td class="text-right">
+                                        {{user.email}}
+                                    </td>
+
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
