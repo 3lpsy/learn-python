@@ -1,0 +1,1 @@
+There are two "apps" within this repo. There is the flask server. This serves a simple flask app that allows users to write blog posts. There is also a cli client. This app is a command line application that uses argparse and the request library in order to interact with the flask app from a cli.
