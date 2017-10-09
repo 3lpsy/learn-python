@@ -54,7 +54,7 @@ We have written a few commands that should be run in this order.
 
 ## Serve Database
 
-    $ python main.py server
+    $ python main.py serve
 
 ## If you want, we can rollback the database
 
